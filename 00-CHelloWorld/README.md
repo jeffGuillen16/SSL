@@ -8,3 +8,4 @@
 - Luego ejecutamos poniendo en la terminal ./Hello.exe
 - Por ultimos autodirgimos este archivo exe para que escriba en un archivo txt 
 .Hello.exe > output.txt
+- Agregamos el gitignore para ignorar los archivos terminado en .exe
