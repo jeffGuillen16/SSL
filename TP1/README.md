@@ -4,3 +4,6 @@
 
 ## Para la compilación los pasos a usar:
 - Transcripción del enunciado: Desarrollar un programa que imprima dos tablas de conversión, una de Fahrenheit a Celsius y otra de Celsius a Fahrenheit.
+
+## Legajo 
+- 1689400
