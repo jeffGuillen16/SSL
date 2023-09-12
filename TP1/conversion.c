@@ -1,33 +1,33 @@
 #include <stdio.h>
 #include "Conversion.h"
 
-void askValues(int* lower, int* upper, int* step) {
+void solicitarValores(int* inferior, int* superior, int* incremento) {
     printf("Ingrese el valor inicial: ");
-    scanf("%d", lower);
+    scanf("%d", inferior);
 
     printf("Ingrese el valor final: ");
-    scanf("%d", upper);
+    scanf("%d", superior);
 
-    printf("Ingrese el paso: ");
-    scanf("%d", step);
+    printf("Ingrese el incremento: ");
+    scanf("%d", incremento);
 }
 
-void headerTable(char* degreeToConvert, char* conversionDegree) {
-    printf("\nTabla de conversión %s a %s\n", degreeToConvert, conversionDegree);
+void encabezadoTabla(char* gradoAConvertir, char* gradoConvertido) {
+    printf("\nTabla de conversión %s a %s\n", gradoAConvertir, gradoConvertido);
     printf("---------------------------------------\n");
-    printf(" %s \t\t %s\n", degreeToConvert, conversionDegree);
+    printf(" %s \t\t %s\n", gradoAConvertir, gradoConvertido);
     printf("---------------------------------------\n");
 }
 
-float conversionFormula(float degree, int isFahrenheitToCelsius) {
-    if (isFahrenheitToCelsius) return (degree - 32) * 5.0 / 9.0;
-    return (degree * 9.0 / 5.0) + 32.0;
+float formulaConversion(float grado, int esFahrenheitACelsius) {
+    if (esFahrenheitACelsius) return (grado - 32) * 5.0 / 9.0;
+    return (grado * 9.0 / 5.0) + 32.0;
 }
 
-void conversionTable(int lower, int upper, int step, int isFahrenheitToCelsius) {
-    float degreeToConvert, conversionDegree;
-    for (degreeToConvert = lower; degreeToConvert <= upper; degreeToConvert += step) {
-        conversionDegree = conversionFormula(degreeToConvert, isFahrenheitToCelsius);
-        printf(" %.2f \t\t\t %.2f\n", degreeToConvert, conversionDegree);
+void tablaConversion(int inferior, int superior, int incremento, int esFahrenheitACelsius) {
+    float gradoAConvertir, gradoConvertido;
+    for (gradoAConvertir = inferior; gradoAConvertir <= superior; gradoAConvertir += incremento) {
+        gradoConvertido = formulaConversion(gradoAConvertir, esFahrenheitACelsius);
+        printf(" %.2f \t\t\t %.2f\n", gradoAConvertir, gradoConvertido);
     }
 }

@@ -1,15 +1,15 @@
 #include "Conversion.h"
 
 int main() {
-    int lower, upper, step;
+    int inferior, superior, incremento;
 
-    askValues(&lower, &upper, &step);
-    headerTable("Fahrenheit", "Celsius");
-    conversionTable(lower, upper, step, 1);
+    solicitarValores(&inferior, &superior, &incremento);
+    encabezadoTabla("Fahrenheit", "Celsius");
+    tablaConversion(inferior, superior, incremento, 1);
 
-    //askValues(&lower, &upper, &step);
-    headerTable("Celsius", "Fahrenheit");
-    conversionTable(lower, upper, step, 0);
+    // solicitarValores(&inferior, &superior, &incremento);
+    encabezadoTabla("Celsius", "Fahrenheit");
+    tablaConversion(inferior, superior, incremento, 0);
 
     return 0;
 }
