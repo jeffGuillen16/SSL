@@ -9,11 +9,11 @@ float redondearFormula(float numero) {
 }
 
 int main() {
-    float tablaFahrenheit[] = {-17.22, -16.667, -16.11, -15.556, -15.00, -14.444, -13.89, -13.333, -12.778, -12.222};
+    float tablaFahrenheit[] = {32.0, 41.0, 50.0, 59.0, 68.0, 77.0, 86.0, 95.0, 104.0, 113.0};
     int incremento = 0;
-    for (float gradoAConvertir = 1.00; gradoAConvertir <= 10.00; gradoAConvertir += 1.00) {
-        assert(redondearFormula(formulaConversion(gradoAConvertir, 1)) == redondearFormula(tablaFahrenheit[incremento]));
-        assert(redondearFormula(formulaConversion(tablaFahrenheit[incremento], 0)) == redondearFormula(gradoAConvertir));
+    for (float gradoAConvertir = 0.0; gradoAConvertir <= 9.0; gradoAConvertir += 1.0) {
+        assert(redondearFormula(formulaConversion(gradoAConvertir * 10.0, 1)) == redondearFormula(tablaFahrenheit[incremento]));
+        assert(redondearFormula(formulaConversion(tablaFahrenheit[incremento], 0)) == redondearFormula(gradoAConvertir * 10.0));
         incremento++;
     }
     return 0;
